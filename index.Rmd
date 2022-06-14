@@ -1,0 +1,237 @@
+---
+title: "Report 'Nakuru Communities Boreholes Inventory'"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: column
+    vertical_layout: fill
+    theme: flatly
+    #runtime: shiny
+---
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(highcharter)
+library(tidyverse)
+library(maps)
+library(htmlwidgets)
+library(leaflet)
+library(echarts4r)
+library(dplyr)
+library(DT)
+library(mapview)
+library(sf)
+library(sp)
+```
+
+
+# General Page {Mapped Boreholes and Borehole Map}
+```{r}
+
+
+```
+
+column: {.sidebar},
+--------------------------------------------------------------
+
+```{r}
+#selectInput("Boreholes", label= "Select Item to be Visualized ", choices=c(" ", "Mapped boreholes Per Sub-County","Oparational Status", "WRA Permit", "Number of households being Served", "Boreholes with high production"),selected="All")
+```
+
+
+```{r read}
+Data4 <- read_csv("E:/Nakuru WaterWax/Unicef Project/Data Using R/Data4.csv")
+
+Data4$Longitude <- as.numeric(Data4$Longitude)
+Data4$Latitude <- as.numeric(Data4$Latitude)
+
+data.sp <- SpatialPointsDataFrame(Data4[,c(3,4)], Data4[,-c(3,4)])
+
+Data5 <- cumsum(Data4$Connected_Households)
+
+```
+
+
+
+Row {data-width=2300}
+-----------------------------------------------------------------------
+
+### Mapped Boreholes Per Sub-County
+
+```{r}
+Data4 %>%
+  group_by(County)%>%
+  summarise(count=n())%>% #number of times variable appears
+  hchart("bar",hcaes( x=County, y=count))%>%
+  hc_title(text = 'Mapped Boreholes',
+           style = list(fontSize = '15px', fontWeight = 'bold'))%>%
+  hc_legend(enabled=TRUE)%>%
+  hc_add_theme(hc_theme_monokai())# You can use different inbuilt themes
+
+```
+
+Row {data-width=2300}
+--------------------------------------------------------------------
+
+### Map of the Mapped Boreholes
+
+```{r}
+leaflet() %>%
+  
+addProviderTiles("Esri") %>%
+  setView(lng = 36.058758, lat= -0.427551, zoom=9) %>%
+  addMarkers(data=Data4, lng = ~Longitude,
+   lat = ~Latitude,
+   popup = ~Borehole_Name, clusterOptions = markerClusterOptions()) 
+
+```
+
+
+# Page 1 (Production, Operation & Population )
+```{r}
+
+```
+
+
+
+Row {data-height=400}
+--------------------------------------------------------------------
+
+### Water Production in M3/h
+
+```{r}
+Data4%>%
+  
+e_chart(x=County)%>%
+     e_bar(serie=Total_Production,
+           showBackground= FALSE, color='violet')%>%
+      e_title(text = '',
+          subtext = 'Cumulative Production in m3/h',
+          left='center')%>%
+  e_toolbox_feature('dataView')%>%
+  e_toolbox_feature('restore') %>%
+  e_toolbox_feature('saveAsImage')%>%
+   e_labels(show = TRUE)%>%
+  e_legend(show = FALSE)%>%
+  e_legend(orient='vertical',left='left')%>%
+  e_tooltip(trigger = 'item')
+
+
+```
+
+Row {data-height=400}
+--------------------------------------------------------------------
+
+### Boreholes Currently Under Production
+
+```{r}
+hchart(Data4$Operational_Status)
+  
+
+```
+
+Row {data-height=400}
+--------------------------------------------------------------------
+
+### Connected Population
+
+```{r}
+Data4%>% 
+  group_by(County)%>%
+  #summarise(Connected_Households)%>% #number of times variable appears
+  hchart("bar",hcaes( x= County, y=Total_Connected_Households))%>%
+  hc_title(text = 'Connected Households',
+           style = list(fontSize = '15px', fontWeight = 'bold'))%>%
+  hc_legend(enabled=TRUE)%>%
+  hc_add_theme(hc_theme_ft())# You can use different inbuilt themes
+
+```
+
+Row {data-height=400}
+--------------------------------------------------------------------
+
+### Cumulative Households Using Water Kiosk 
+
+```{r}
+Data4 %>%
+  group_by(County)%>%
+  #summarise(count=n())%>% #number of times variable appears
+  hchart("bar",hcaes( x=County, y=Total_Households_using_Kiosks))%>%
+  hc_title(text = 'Households Using Kiosks',
+           style = list(fontSize = '15px', fontWeight = 'bold'))%>%
+  hc_legend(enabled=TRUE)%>%
+  hc_add_theme(hc_theme_sandsignika())# You can use different inbuilt themes
+
+```
+
+
+
+# Page 2 (Power_Source, WRA_Permit, Collecting_Revenue & Funders )
+```{r}
+
+```
+
+
+
+Row {data-height=400}
+----------------------------------------------------------------------
+
+### Power Source
+
+
+```{r}
+hchart(Data4$Power_Source)
+
+```
+
+Column {data-width=650}
+----------------------------------------------------------------------
+
+### WRA Permit
+
+```{r}
+hchart(Data4$WRA_Permit_Status)
+
+```
+
+
+
+### Collecting Revenue
+
+```{r}
+hchart(Data4$Revenue_Collection_Status)
+```
+
+
+Row {data-height=400}
+----------------------------------------------------------------------
+
+### Funders
+
+```{r}
+hchart(Data4$Funder)
+```
+
+
+
+
+# Data and Tables (Downlodable)
+```{r}
+
+
+```
+
+
+
+```{r}
+datatable(Data4,
+          caption = "Nakuru Community Boreholes Data",
+          rownames = T,
+          filter = "top",
+          class = "hover cell-border stripe", #for making grid cells
+          #editable = "cell", # for editing cells
+          extensions="Buttons",
+          options = list(pageLength = 20,dom="Bfrtip", buttons=c( 'copy','excel', 'cSV' )))
+
+```
+
