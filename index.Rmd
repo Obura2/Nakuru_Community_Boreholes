@@ -179,7 +179,7 @@ Data4%>%
   summarise(Households_Connected=sum(Connected_Households))%>%
   arrange(Households_Connected)%>%
   e_charts(County)%>%
-  e_bar(serie = Households_Connected)%>%
+  e_pie(serie = Households_Connected,roseType='radius')%>%
   e_tooltip(trigger = "item")%>%
   #e_labels(TRUE)%>%
    e_title(text = 'Connected Households',
@@ -188,7 +188,6 @@ Data4%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_labels(show = TRUE)%>%
   e_legend(show = TRUE)%>%
     e_legend(orient='horizontal',left=8,top="95%")%>%
   e_theme('dark-blue')
@@ -217,7 +216,7 @@ Data4%>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(show = TRUE)%>%
     e_legend(orient='horizontal',left=8,top="95%")%>%
-  e_theme('macarons')
+  e_theme('chalk')
 
 ```
 
@@ -330,7 +329,7 @@ Data4%>%
 
 
 
-# Data and Tables (Downlodable)
+# Data and Tables 
 ```{r}
 
 ```
