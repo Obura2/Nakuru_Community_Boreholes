@@ -79,15 +79,15 @@ Data4%>%
    e_title(text = 'Mapped Boreholes',
           subtext = '',
           left='center', top=20)%>%
-  e_toolbox_feature('dataView')%>%
-  e_toolbox_feature('restore') %>%
-  e_toolbox_feature('saveAsImage')%>%
   e_legend(orient='horizontal',left=8,top="95%")%>%
-  e_theme('purple-passion')%>%
   e_image_g(right=20, top=20,z = -999,style=list(image = "https://www.vei.nl/IManager/Media/100847/1850525/EN/reg/waterworx-logo-final.jpg",
       width = 150,
       height = 150,
-      opacity = .6))
+      opacity = .6))%>%
+e_toolbox_feature('dataView')%>%
+  e_toolbox_feature('restore') %>%
+  e_toolbox_feature('saveAsImage')%>%
+e_theme('purple-passion')
   #e_theme('shine')
 
 
@@ -168,7 +168,7 @@ Data4%>%
 
 ```
 
-Row {data-height=400}
+Row {data-height=600}
 --------------------------------------------------------------------
 
 ### Connected Population
@@ -346,7 +346,7 @@ datatable(Data4,
           class = "hover cell-border stripe", #for making grid cells
           #editable = "cell", # for editing cells
           extensions="Buttons",
-          options = list(pageLength = 20,dom="Bfrtip", buttons=c( 'copy','excel', 'cSV' )))
+          options = list(pageLength = 20,dom="Bfrtip", buttons=c( '','', '' )))
 
 ```
 
