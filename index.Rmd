@@ -87,6 +87,7 @@ Data4%>%
 e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
+   e_toolbox_feature('dataZoom')%>%
 e_theme('purple-passion')
   #e_theme('shine')
 
@@ -134,6 +135,7 @@ e_chart(x=County)%>%
           left='center', top=20)%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
+   e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
    e_labels(show = TRUE)%>%
   e_legend(show = TRUE)%>%
@@ -187,6 +189,7 @@ Data4%>%
           left='center', top=20)%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
+   e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(show = TRUE)%>%
     e_legend(orient='horizontal',left=8,top="95%")%>%
@@ -212,6 +215,7 @@ Data4%>%
           subtext = '',
           left='center', top=20)%>%
   e_toolbox_feature('dataView')%>%
+   e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(show = TRUE)%>%
@@ -248,6 +252,7 @@ Data4%>%
           left='center', top=20)%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
+   e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(orient='horizontal',left=8,top="95%")%>%
   e_theme('chalk')
@@ -319,6 +324,7 @@ Data4%>%
           subtext = '',
           left='center', top=20)%>%
   e_toolbox_feature('dataView')%>%
+  e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(orient='horizontal',left=8,top="80%")%>%
