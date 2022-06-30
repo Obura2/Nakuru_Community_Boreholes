@@ -1,5 +1,5 @@
 ---
-title: "Report 'Nakuru Communities Boreholes Inventory'"
+title: Nakuru Communities Boreholes Inventory
 output: 
   flexdashboard::flex_dashboard:
     orientation: column
