@@ -94,11 +94,12 @@ Row {data-width=2300}
 
 
 ```{r}
-leaflet("Mapped Boreholes") %>%
+leaflet() %>%
   
-addProviderTiles("Esri.WorldImagery") %>%
+addProviderTiles("Esri") %>%
   setView(lng = 36.058758, lat= -0.427551, zoom=9) %>%
- # addPolygons(~Sub_Counties) %>% 
+ addScaleBar(position='bottomleft') %>% 
+  addMeasure() %>% 
   addMarkers(data=Data4, lng = ~Longitude,
    lat = ~Latitude,
    popup = ~Borehole_Name, clusterOptions = markerClusterOptions()) 
