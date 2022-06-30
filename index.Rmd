@@ -25,7 +25,7 @@ library(sp)
 ```
 
 
-# General Page {Mapped Boreholes and Borehole Map}
+# {Mapped Boreholes and Borehole Map}
 ```{r}
   
 ```
@@ -107,7 +107,7 @@ addProviderTiles("Esri") %>%
 ```
 
 
-# Page 1 (Production, Operation & Population )
+# (Production, Operation & Population )
 
 
 Row {data-height=400}
@@ -217,7 +217,7 @@ Data4%>%
 
 
 
-# Page 2 (Power_Source, WRA_Permit, Collecting_Revenue & Funders )
+# (Power_Source, WRA_Permit, Collecting_Revenue & Funders )
 ```{r}
 
 ```
@@ -324,7 +324,7 @@ Data4%>%
 ```
 
 
-# Page 3 (Projects Land Ownership)
+# (Projects Land Ownership)
 
 
 
@@ -351,7 +351,7 @@ Data4%>%
 
 ```
 
-# Page 4 (Data and Tables)
+# (Data and Tables)
 ```{r}
 
 ```
