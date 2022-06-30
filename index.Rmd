@@ -132,7 +132,7 @@ Row {data-height=400}
    e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(show = TRUE)%>%
-    e_legend(orient='horizontal',left=8,top="95%")%>%
+    e_legend(orient='horizontal',left=8,top="90%")%>%
   e_theme('dark') 
  
 ```
@@ -156,7 +156,7 @@ Data4%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_legend(orient='horizontal',left=8,top="85%")%>%
   e_theme('chalk')
 
 ```
@@ -183,7 +183,7 @@ Data4%>%
    e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(show = TRUE)%>%
-    e_legend(orient='horizontal',left=8,top="95%")%>%
+    e_legend(orient='horizontal',left=8,top="85%")%>%
   e_theme('dark-blue')
 
 ```
@@ -210,7 +210,7 @@ Data4%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(show = TRUE)%>%
-    e_legend(orient='horizontal',left=8,top="95%")%>%
+    e_legend(orient='horizontal',left=8,top="85%")%>%
   e_theme('chalk')
 
 ```
@@ -245,7 +245,7 @@ Data4%>%
   e_toolbox_feature('restore') %>%
    e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_legend(orient='horizontal',left=8,top="85%")%>%
   e_theme('chalk')
 
 ```
@@ -269,7 +269,7 @@ Data4%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_legend(orient='horizontal',left=8,top="90%")%>%
   e_theme('chalk')
 ```
 
@@ -291,7 +291,7 @@ Data4%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_legend(orient='horizontal',left=8,top="90%")%>%
   e_theme('dark')
 
 ```
@@ -318,7 +318,7 @@ Data4%>%
   e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="90%")%>%
+  e_legend(orient='horizontal',left=8,top="87%")%>%
   e_theme('dark')
 
 ```
@@ -346,7 +346,7 @@ Data4%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_legend(orient='horizontal',left=8,top="90%")%>%
   e_theme('dark')
 
 ```

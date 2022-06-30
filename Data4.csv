@@ -16,11 +16,11 @@ Bahati,Muguadhi water Project,-0.2360575,36.1820727,2020,120,Yes,5,Tanks Bulk Me
 Bahati,Wanyororo A,-0.2522999,36.1877484,2019,178,Yes,15,Pump House Tanks Bulk Meter ,County Government,Yes,KPLC & Solar,Community,Yes,800 Households,200,600
 Bahati,Menengai Community borehole,-0.2714316,36.2062594,2002,128,No,0,Pump House Tanks,Mengai Group ,No,KPLC,Community,No,,400,0
 Bahati,Ndondori,-0.2464266,36.2385801,2021,230,No,0,,County Government,Yes,,Chiefs camp,Yes,,500,0
-Bahati,Tabuga Water Project,-0.2620161,36.1801034,1963,,Yes,8,Pump House Tanks Bulk Meter ,,Yes,KPLC & Solar,Community,Yes,100 per household per day,200,0
+Bahati,Tabuga Water Project,-0.2620161,36.1801034,1963,,Yes,8,Pump House Tanks Bulk Meter ,Settlers & County Government,Yes,KPLC & Solar,Community,Yes,100 per household per day,200,0
 Bahati,Lamnyondeki ,-0.2658604,36.1664836,1997,,Yes,4,Pump House Fence Tanks Bulk Meter ,Settlers & County Government,Yes,KPLC,Community,Yes,,50,200
 Kuresoi North,Sweot Water Projector ,-0.4004365,35.6838483,1945,120,Yes,3,Fence Pump House Tanks Bulk Meter ,Community Donation ,Yes,KPLC & Solar,Community ,No,,20,50
 Kuresoi North,Sitoito ,-0.3919875,35.5702732,2019,230,Yes,30,Tanks Bulk Meter ,County Government,No,Solar,Community,No,,29,200
-Kuresoi North,Segutony',-0.3722775,35.6803087,2020,230,No,0,,County Government,,Solar,Community,,,0,300
+Kuresoi North,Segutony',-0.3722775,35.6803087,2020,230,No,0,,County Government,No,Solar,Community,No,,0,300
 Kuresoi South,Dendwet dispensary borehole,-0.5043024,35.6976656,2018,172,Yes,20,Tanks Bulk Meter ,Community Donation ,No,Solar,Community ,No,,30,100
 Kuresoi South,Kapseger,-0.4999939,35.7143916,1948,82,Yes,3,Bulk Meter  Tanks,Community Donation,No,Solar,Community,No,,50,100
 Kuresoi South,Saptet Area Borehole,-0.4830343,35.707749,2020,200,Yes,36,Tanks Bulk Meter  Pump House,County Government,Yes,Solar,School ,No,,0,600
@@ -149,3 +149,8 @@ Subukia,Endao,-0.0838163,36.1260841,2019,200,Yes,7,Fence Pump House Tanks Bulk M
 Subukia,Solai Nyakinywa,-0.0950048,36.12557,2016,220,Yes,18,Fence Tanks,Doner Funded,No,KPLC & Solar,School,Yes,"
 100 flat rate per month, on connected households ",100,300
 Subukia,Akuisi,-0.1182059,36.1395374,2019,200,Yes,30,Fence Pump House Tanks Bulk Meter ,County Government ,No,Solar,Community,No,,0,500
+Nakuru East,Teachers Boreholes ,-0.2758522,36.114932,2020,250,No,31,,County Government ,Yes,,Market,No,,0,0
+Nakuru East,Keratina Borehole,-0.2902781,36.1211999,2020,230,No,30,,County Government ,Yes,,Market,No,,0,0
+Nakuru East,Meruge Tank Site,-0.3697525,36.1495792,2022,212,No,12,Fence Pump House Tanks,County Government ,Yes,KPLC,Community,No,,0,0
+Nakuru East,Mwariki Farm,-0.3658518,36.1516561,1924,145,Yes,10,Fence Pump House Tanks Bulk Meter ,Settlers ,Yes,KPLC,Community,Yes,"5 per 20ltrs, 100 per Unit",155,200
+Nakuru East,Meruge Dispensary,-0.3731944,36.1501164,2005,180,Yes,17,Fence Pump House Tanks Bulk Meter ,County Government ,Yes,KPLC,Hospital ,Yes,"5 per 20ltrs, 100 per unit ",311,500
