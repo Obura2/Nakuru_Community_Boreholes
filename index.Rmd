@@ -27,27 +27,23 @@ library(sp)
 
 # General Page {Mapped Boreholes and Borehole Map}
 ```{r}
-
-
+  
 ```
 
 column: {.sidebar},
 --------------------------------------------------------------
 
-```{r}
-#selectInput("Boreholes", label= "Select Item to be Visualized ", choices=c(" ", "Mapped boreholes Per Sub-County","Oparational Status", "WRA Permit", "Number of households being Served", "Boreholes with high production"),selected="All")
-```
-
 
 ```{r read}
-Data4 <- read_csv("E:/Nakuru WaterWax/Unicef Project/Data Using R/Data4.csv")
+Data4 <- read_csv("E:/Nakuru WaterWax/Unicef Project/Data Using R/Borehole Data in Flex dashboard/Data4.csv")
 
 Data4$Longitude <- as.numeric(Data4$Longitude)
 Data4$Latitude <- as.numeric(Data4$Latitude)
 
 data.sp <- SpatialPointsDataFrame(Data4[,c(3,4)], Data4[,-c(3,4)])
 
-Data5 <- cumsum(Data4$Connected_Households)
+
+
 
 ```
 
@@ -59,15 +55,6 @@ Row {data-width=2300}
 ### Mapped Boreholes Per Sub-County
 
 ```{r}
-#Data4 %>%
-  #group_by(County)%>%
-  #summarise(count=n())%>% #number of times variable appears
-  #hchart("bar",hcaes( x=County, y=count))%>%
-  #hc_title(text = 'Mapped Boreholes',
-           #style = list(fontSize = '15px', fontWeight = 'bold'))%>%
-  #hc_legend(enabled=TRUE)%>%
-  #hc_labels(enable=TRUE)%>%
-  #hc_add_theme(hc_theme_monokai())# You can use different inbuilt themes
 
 Data4%>%
   group_by(County)%>%
@@ -80,9 +67,9 @@ Data4%>%
           subtext = '',
           left='center', top=20)%>%
   e_legend(orient='horizontal',left=8,top="95%")%>%
-  e_image_g(right=20, top=20,z = -999,style=list(image = "https://www.vei.nl/IManager/Media/100847/1850525/EN/reg/waterworx-logo-final.jpg",
-      width = 150,
-      height = 150,
+  e_image_g(right=20, top=30,z = -999,style=list(image = "https://www.vei.nl/IManager/Media/100847/1850525/EN/reg/waterworx-logo-final.jpg",
+      width = 100,
+      height = 100,
       opacity = .6))%>%
 e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
@@ -101,10 +88,17 @@ Row {data-width=2300}
 ### Map of the Mapped Boreholes
 
 ```{r}
-leaflet() %>%
+
+```
+
+
+
+```{r}
+leaflet("Mapped Boreholes") %>%
   
-addProviderTiles("Esri") %>%
+addProviderTiles("Esri.WorldImagery") %>%
   setView(lng = 36.058758, lat= -0.427551, zoom=9) %>%
+ # addPolygons(~Sub_Counties) %>% 
   addMarkers(data=Data4, lng = ~Longitude,
    lat = ~Latitude,
    popup = ~Borehole_Name, clusterOptions = markerClusterOptions()) 
@@ -113,37 +107,33 @@ addProviderTiles("Esri") %>%
 
 
 # Page 1 (Production, Operation & Population )
-```{r}
-
-```
-
 
 
 Row {data-height=400}
 --------------------------------------------------------------------
 
-### Water Production in M3/h
+### Total Sub-County Production
 
 ```{r}
-Data4%>%
- group_by(County) %>%
-e_chart(x=County)%>%
-     e_bar(serie=Total_Production)%>%
-           #showBackground= TRUE, color='violet')%>%
-      e_title(text = 'Cumulative Production in m3/h',
+ Data4%>%
+  group_by(County)%>%
+  summarise(Total_Yield=sum(Yield))%>%
+  #arrange(Yield)%>%
+  e_charts(County)%>%
+  e_bar(serie = Total_Yield,roseType='radius')%>%
+  e_tooltip(trigger = "item")%>%
+  #e_labels(TRUE)%>%
+   e_title(text = 'Projects Sub-Counties Production',
           subtext = '',
           left='center', top=20)%>%
   e_toolbox_feature('dataView')%>%
   e_toolbox_feature('restore') %>%
    e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('saveAsImage')%>%
-   e_labels(show = TRUE)%>%
   e_legend(show = TRUE)%>%
-  e_legend(orient='horizontal',left=8,top="95%")%>%
-  e_theme('essos')%>%
-  e_tooltip(trigger = 'item')
-
-
+    e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_theme('dark') 
+ 
 ```
 
 Row {data-height=400}
@@ -301,7 +291,7 @@ Data4%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
   e_legend(orient='horizontal',left=8,top="95%")%>%
-  e_theme('shine')
+  e_theme('dark')
 
 ```
 
@@ -327,15 +317,40 @@ Data4%>%
   e_toolbox_feature('dataZoom')%>%
   e_toolbox_feature('restore') %>%
   e_toolbox_feature('saveAsImage')%>%
-  e_legend(orient='horizontal',left=8,top="80%")%>%
+  e_legend(orient='horizontal',left=8,top="90%")%>%
   e_theme('dark')
 
 ```
 
 
+# Page 3 (Projects Land Ownership)
 
 
-# Data and Tables 
+
+```{r}
+
+```
+
+```{r}
+Data4%>%
+  group_by(Land_Owner)%>%
+  summarise(Count=n())%>% #number of times variable appears
+  e_charts(Land_Owner)%>%
+  e_pie(serie = Count,roseType='radius')%>%
+  e_tooltip(trigger = "item")%>%
+  #e_labels(TRUE)%>%
+   e_title(text = 'Land_Owners',
+          subtext = '',
+          left='center', top=20)%>%
+  e_toolbox_feature('dataView')%>%
+  e_toolbox_feature('restore') %>%
+  e_toolbox_feature('saveAsImage')%>%
+  e_legend(orient='horizontal',left=8,top="95%")%>%
+  e_theme('dark')
+
+```
+
+# Page 4 (Data and Tables)
 ```{r}
 
 ```
