@@ -22,6 +22,7 @@ library(DT)
 library(mapview)
 library(sf)
 library(sp)
+library(janitor)
 ```
 
 
@@ -57,9 +58,9 @@ Row {data-width=2300}
 ```{r}
 
 Data4%>%
-  group_by(County)%>%
+  group_by(Sub_Counties)%>%
   summarise(Count=n())%>% #number of times variable appears
-  e_charts(County)%>%
+  e_charts(Sub_Counties)%>%
   e_bar(serie = Count,radius=c('30%','70%'))%>%
   e_tooltip(trigger = "item")%>%
   #e_labels(TRUE)%>%
@@ -107,7 +108,7 @@ addProviderTiles("Esri") %>%
 ```
 
 
-# (Production, Operation & Population )
+# {Production, Operation & Population }
 
 
 Row {data-height=400}
@@ -117,10 +118,10 @@ Row {data-height=400}
 
 ```{r}
  Data4%>%
-  group_by(County)%>%
+  group_by(Sub_Counties)%>%
   summarise(Total_Yield=sum(Yield))%>%
   #arrange(Yield)%>%
-  e_charts(County)%>%
+  e_charts(Sub_Counties)%>%
   e_bar(serie = Total_Yield,roseType='radius')%>%
   e_tooltip(trigger = "item")%>%
   #e_labels(TRUE)%>%
@@ -168,10 +169,10 @@ Row {data-height=600}
 
 ```{r}
 Data4%>%
-  group_by(County)%>%
+  group_by(Sub_Counties)%>%
   summarise(Households_Connected=sum(Connected_Households))%>%
   arrange(Households_Connected)%>%
-  e_charts(County)%>%
+  e_charts(Sub_Counties)%>%
   e_pie(serie = Households_Connected,roseType='radius')%>%
   e_tooltip(trigger = "item")%>%
   #e_labels(TRUE)%>%
@@ -195,10 +196,10 @@ Row {data-height=400}
 
 ```{r}
 Data4%>%
-  group_by(County)%>%
+  group_by(Sub_Counties)%>%
   summarise(Households_using_Water_Kiosks=sum(Households_using_Water_Kiosks))%>%
   arrange(Households_using_Water_Kiosks)%>%
-  e_charts(County)%>%
+  e_charts(Sub_Counties)%>%
   e_pie(serie = Households_using_Water_Kiosks, radius=c('30%','70%'))%>%
   e_tooltip(trigger = "item")%>%
   #e_labels(TRUE)%>%
@@ -217,7 +218,7 @@ Data4%>%
 
 
 
-# (Power_Source, WRA_Permit, Collecting_Revenue & Funders )
+# {Power_Source, WRA_Permit, Collecting_Revenue & Funders }
 ```{r}
 
 ```
@@ -351,7 +352,69 @@ Data4%>%
 
 ```
 
-# (Data and Tables)
+
+# {Tables}
+
+```{r}
+
+```
+
+Row {data-height=250}
+----------------------------------------------------------------------
+
+### Operational_Status
+
+
+```{r}
+Data4 %>% 
+  group_by(Sub_Counties) %>% 
+  tabyl(Sub_Counties,Operational_Status) %>% 
+  adorn_totals("row") 
+ # adorn_percentages("row") %>% 
+  #adorn_pct_formatting()
+```
+
+Row {data-height=250}
+----------------------------------------------------------------------
+
+### WRA Permision Availability Status
+
+
+```{r}
+Data4 %>% 
+  group_by(Sub_Counties) %>% 
+  tabyl(Sub_Counties,WRA_Permit_Status) %>% 
+  adorn_totals("row") 
+```
+Column {data-height=250}
+----------------------------------------------------------------------
+
+### Collecting  revenue Status
+
+```{r}
+Data4 %>% 
+  group_by(Sub_Counties) %>% 
+  tabyl(Sub_Counties,Revenue_Collection_Status) %>% 
+  adorn_totals("row") 
+```
+
+
+Column {data-width=650}
+----------------------------------------------------------------------
+
+### Power Source
+
+```{r}
+Data4 %>% 
+  group_by(Sub_Counties) %>% 
+  tabyl(Sub_Counties,Power_Source) %>% 
+  adorn_totals("row") %>% 
+  adorn_percentages("row") %>% 
+  adorn_pct_formatting()
+```
+
+
+# {Data}
 ```{r}
 
 ```

@@ -1,4 +1,4 @@
-County,Borehole_Name,Latitude,Longitude,Year_Drilled,Depth_m,Operational_Status,Yield,Complementary_Assets,Funder,WRA_Permit_Status,Power_Source,Land_Owner,Revenue_Collection_Status,Tariff,Connected_Households,Households_using_Water_Kiosks
+Sub_Counties,Borehole_Name,Latitude,Longitude,Year_Drilled,Depth_m,Operational_Status,Yield,Complementary_Assets,Funder,WRA_Permit_Status,Power_Source,Land_Owner,Revenue_Collection_Status,Tariff,Connected_Households,Households_using_Water_Kiosks
 Bahati,Wanyororo B,-0.1564394,36.1118553,2020,235,No,0,Tanks,County Government,Yes,,Community,Yes,2 Per 20 Ltrs,0,0
 Bahati,GDC,-0.1751863,36.1105766,2018,,No,0,Fence,Doner Funded,Yes,KPLC,GDC,No,,0,0
 Bahati,Wanyororo,-0.1655825,36.1125315,1927,,No,0,Tanks,Community Donation,No,Generator,Community ,Yes,,0,0
@@ -29,12 +29,12 @@ Kuresoi South,Tulwet ,-0.4471675,35.7043365,1945,124,Yes,11,Fence Tanks Bulk Met
 Kuresoi South,Keringet town,-0.4268294,35.6859746,1992,120,Yes,25,Fence Pump House Tanks,Community Donation ,Yes,KPLC & Solar,Community ,Yes,Naruwasco tariff ,250,0
 Kuresoi South,Silibwet,-0.5150544,35.7183088,2019,150,Yes,6,Fence Pump House Tanks Bulk Meter ,County Government,Yes,Solar,School ,No,,0,200
 Kuresoi South,Kewamoi,-0.4254735,35.6294702,2018,200,Yes,20,Fence Tanks Bulk Meter ,County Government,Yes,Solar,Hospital,Yes,5 per 20ltrs and 200 per connected household per month ,61,200
-Kuresoi South,Chemaner,-0.4357316,35.6059897,2021,230,No,0,,County Government,,Solar,Hospital ,,,0,300
+Kuresoi South,Chemaner,-0.4357316,35.6059897,2021,230,No,0,,County Government,No,Solar,Hospital ,No,,0,300
 Kuresoi South,Ikumbi Borehole,-0.4132871,35.577729,2009,60,Yes,30,Fence Tanks Bulk Meter  Pump House,County Government,No,KPLC,Hospital ,Yes,"5 per 20Ltr, 200 per month per household",40,200
-Kusesoi North,Ndasiata,-0.6396884,35.6584631,2019,280,Yes,4,Fence Pump House Tanks Bulk Meter ,Community Donation ,Yes,Solar,School,Yes,200 per household ,0,100
-Kusesoi North,Kitoben,-0.6334586,35.6779402,2022,238,No,0,Fence Bulk Meter ,County Government,Yes,Solar,Community,No,,0,100
-Kusesoi North,Baralget ,-0.4128246,35.7354475,2019,200,Yes,4,Fence Pump House Tanks Bulk Meter ,County Government,Yes,Solar,School ,Yes,"5 per 20ltrs, ",210,50
-Kusesoi North,Tarakwa,-0.411036,35.6558902,2020,180,Yes,12,Bulk Meter  Tanks Fence,County Government,Yes,Solar,School ,Yes,,85,150
+Kuresoi North,Ndasiata,-0.6396884,35.6584631,2019,280,Yes,4,Fence Pump House Tanks Bulk Meter ,Community Donation ,Yes,Solar,School,Yes,200 per household ,0,100
+Kuresoi North,Kitoben,-0.6334586,35.6779402,2022,238,No,0,Fence Bulk Meter ,County Government,Yes,Solar,Community,No,,0,100
+Kuresoi North,Baralget ,-0.4128246,35.7354475,2019,200,Yes,4,Fence Pump House Tanks Bulk Meter ,County Government,Yes,Solar,School ,Yes,"5 per 20ltrs, ",210,50
+Kuresoi North,Tarakwa,-0.411036,35.6558902,2020,180,Yes,12,Bulk Meter  Tanks Fence,County Government,Yes,Solar,School ,Yes,,85,150
 Molo,Mgere Mkia,-0.2640912,35.7576079,2011,190,No,16,Fence Pump House Tanks,County Government,No,KPLC & Solar,Community,No,,0,0
 Molo,Kennyatta 2,-0.2511573,35.7451727,2021,348,Yes,15,Fence Pump House Tanks Bulk Meter  Chlorination Doser ,County Government,Yes,KPLC,Community,Yes,"5 per 20ltrs, 400 per unit per month for the household connections",350,50
 Molo,Kennyatta 1,-0.2472556,35.7437766,2005,150,Yes,13,Fence Pump House Bulk Meter  Chlorination Doser  Tanks,Doner Funded,Yes,KPLC,Community,Yes,5 per 20ltrs and 400 per household connection ,0,0
@@ -161,3 +161,48 @@ Gilgil,Nyondia A,-0.6877877,36.4668205,1997,180,Yes,5,Fence Pump House Tanks Bul
 Gilgil,Nyondia B,-0.7058894,36.4652526,2019,250,Yes,10,Fence Pump House Tanks Bulk Meter ,County Government,Yes,Solar,Community,Yes,50 per unit ,80,0
 Gilgil,Gwa share,-0.5745349,36.4513949,2020,200,Yes,20,Fence Pump House Tanks Bulk Meter ,County Government,Yes,Solar,Community,No,,0,300
 Gilgil,Milimani,-0.6257765,36.4599572,2019,165,Yes,10,Fence Pump House Bulk Meter  Tanks,County Government,Yes,Solar,Community,Yes,200 per connected household ,200,350
+Gilgil,Kagisho,-0.3999886,36.341481,2020,210,Yes,10,Fence Pump House Bulk Meter Tanks,National Government ,Yes,Solar,Community,No,,0,250
+Gilgil,Kasambara,-0.363992,36.2386052,2021,280,Yes,12,Fence Tanks Pump House Bulk Meter,County Government ,Yes,Solar,Community,Yes,"5 per 20 Ltr, 50 per unit per connected households",60,280
+Gilgil,Echareria,-0.3483252,36.2238876,2010,180,Yes,5,Tanks Bulk Meter Pump House Fence,County Government ,Yes,Solar,Community,Yes,"5 per 40 Ltr, 50 per unit",60,400
+Gilgil,Kirima,-0.3444143,36.2183566,2021,270,Yes,12,Fence Pump House Tanks Bulk Meter,County Government ,Yes,Solar,Community,No,,0,250
+Gilgil,Twendane,-0.3945835,36.3302273,2018,230,Yes,10,Fence Tanks Bulk Meter Pump House,National Government ,Yes,Solar,Community,No,,0,300
+Gilgil,Gitare,-0.4113251,36.3122372,2014,,Yes,5,Fence Pump House Bulk Meter Tanks,County Government ,Yes,KPLC,School,Yes,"5 per 20 Ltrs,",0,400
+Gilgil,Kigogo,-0.4402793,36.3151941,2021,180,Yes,10,Fence Tanks,County Government ,No,Solar,School,No,,0,200
+Gilgil,Nuthu,-0.4425385,36.3345016,2021,250,Yes,6,Fence Pump House Tanks Bulk Meter,National Government ,Yes,Solar,Community,Yes,"5 per 20Ltrs, 150 per connected Household",10,200
+Gilgil,Oljorai,-0.5701431,36.1883983,2016,220,Yes,12,Fence Pump House Tanks Bulk Meter,County Government ,Yes,Solar,Community,Yes,3 per 20Ltrs,0,750
+Gilgil,Kongasis,-0.5548537,36.1505529,2007,250,Yes,3,Fence Pump House Tanks Bulk Meter,Settlers & County Government,Yes,KPLC,Community,Yes,"5 per 20ltrs, 120 per Unit",11,300
+Gilgil,Sachangwan,-0.5372,36.1597691,2016,150,Yes,12,Fence Tanks Bulk Meter Pump House,Doner Funded,Yes,Solar,Community,Yes,"5 per 20ltrs, 120 per unit",10,150
+Gilgil,Kewamu,-0.539339,36.136008,2015,160,Yes,5,Fence Tanks Bulk Meter Pump House,Settlers & County Government,Yes,Solar,Community,Yes,"5 per 20Ltr, 250 per unit",12,800
+Gilgil,Rerecua,-0.563259,36.1180892,2007,221,Yes,6,Fence Pump House Tanks Bulk Meter,Doner Funded,Yes,KPLC & Solar,Community,No,,15,300
+Gilgil,Inua Hustles,-0.566999,36.114916,2019,250,Yes,5,Fence Pump House Bulk Meter Tanks,County Government ,Yes,KPLC & Solar,Community,Yes,5 per 20ltrs,0,350
+Gilgil,Miti Mingi,-0.5298408,36.0905323,2006,230,Yes,13,Fence Tanks Bulk Meter,Church Donation,Yes,Solar,Community,Yes,"5 per 20ltrs, 250 per unit",40,200
+Gilgil,Mahiga,-0.509075,36.0621903,2021,200,Yes,10,Fence Tanks Bulk Meter,National Government ,Yes,Solar,Community,Yes,,0,300
+Gilgil,Derit,-0.4894626,36.1573455,2020,165,Yes,25,Fence Pump House Tanks Bulk Meter,County Government ,Yes,Solar,Community,Yes,,0,500
+Gilgil,Worker Water Project,-0.3425386,36.1516932,2020,180,Yes,12,Fence Tanks Bulk Meter Pump House,County Government ,Yes,Solar,Community,Yes,3 per 20Ltrs,0,200
+Kuresoi North,Moto,-0.255617,35.718031,2017,200,Yes,8,Tanks Bulk Meter Pump House,County Government ,Yes,KPLC & Solar,School,Yes,Naruwasco Tarif,300,350
+Kuresoi North,Rironi Women Group,-0.1931119,35.692444,1951,171,Yes,3,Fence Tanks Bulk Meter,Settlers,No,KPLC ,Individual,Yes,"200 per Month, 5 per 20ltr",70,50
+Kuresoi North,Mchorwe,-0.1947361,35.6892268,2021,256,Yes,27,Fence Tanks Bulk Meter,Church Donation,Yes,Solar,School,No,,250,0
+Kuresoi North,African Farm,-0.1951108,35.6875114,2019,125,No,16,Tanks,County Government ,Yes,Solar,Community,No,,0,0
+Kuresoi North,Choronk,-0.2098356,35.6621208,2021,256,Yes,36,Tanks Bulk Meter,County Government ,Yes,Solar,School,Yes,2 per 20 Ltr,0,290
+Kuresoi North,Taibain Primary,-0.1865664,35.711202,2020,200,Yes,20,Tanks Bulk Meter,National Government ,Yes,Solar,School,No,,0,200
+Kuresoi North,Mau,-0.0893934,35.658722,2020,200,Yes,8,Fence Tanks Bulk Meter,County Government ,Yes,Solar,Individual,Yes,Naruwasco Tarif,80,120
+Kuresoi North,Baraka Salome Borehole,-0.2078679,35.6925998,2009,160,Yes,12,Fence Tanks Bulk Meter,County Government ,Yes,KPLC & Solar,Community,No,,0,200
+Nakuru West,Hingombor Phase 2,-0.3130512,36.019588,2019,185,Yes,5.5,Tanks Bulk Meter Pump House,County Government ,Yes,KPLC,School,Yes,"150 per unit, 5 per 20ltr",374,200
+Nakuru West,Mugoon,-0.3197984,36.0222301,2020,250,Yes,8,Fence Pump House Bulk Meter Tanks,County Government ,Yes,KPLC & Solar,Community,Yes,100 per unit,600,0
+Nakuru West,Engibor Phase 1,-0.3278612,36.0228879,2001,250,No,0,Fence Pump House Tanks Bulk Meter,Community Donation ,Yes,KPLC,Community,Yes,150 per unit,300,0
+Nakuru West,Lalwet,-0.3358899,36.0285513,2015,210,Yes,10,Fence Pump House Bulk Meter Tanks,Doner Funded,Yes,KPLC & Solar,Community,Yes,"3 per 20Ltrs, 100 per unit",150,500
+Nakuru West,Kamasai,-0.3541004,36.0425691,1965,108,Yes,9,Fence Tanks,Community Donation ,No,KPLC,Community,Yes,"50 per unit, 3 per 20Ltrs",100,300
+Nakuru West,Kigonor,-0.3732077,36.0401305,2019,200,Yes,0,Fence Tanks Bulk Meter,Community Donation ,No,KPLC & Solar,Community,Yes,100 per Unit,150,100
+Nakuru West,Soimet,-0.3154088,36.0430983,2017,230,Yes,10,Pump House Tanks Bulk Meter,Doner Funded,Yes,KPLC,Community,Yes,"3 per 20Ltrs, 70 per unit",300,250
+Nakuru West,Kapkures Water Project,-0.3110436,36.0398321,2018,76,Yes,5,Fence Pump House Tanks Bulk Meter,National Government ,Yes,Solar,Community,Yes,"2.5 per 20ltrs, 60 per unit",30,200
+Nakuru West,Ainoptich,-0.3034715,36.0320317,1968,100,Yes,10,Fence Pump House Tanks Bulk Meter,Settlers,Yes,KPLC & Solar,Individual,Yes,"3 per 20Ltrs, 60 per unit",300,500
+Nakuru West,Mogoon Secondary,-0.3047309,36.0257175,2015,160,Yes,10,Pump House Bulk Meter Tanks,Government Financed,Yes,KPLC,School,Yes,"5 per 20ltrs, 80 per unit",80,300
+Rongai,Kapkwen,-0.1550721,35.8347899,1993,110,No,0,Fence Tanks Bulk Meter,County Government ,No,KPLC,Individual,Yes,,200,350
+Rongai,Boito,-0.1719872,35.9102121,1963,157,Yes,13,Fence Tanks Bulk Meter,County Government ,Yes,KPLC,Community,Yes,,121,180
+Rongai,Ndoroto,-0.1855247,35.9079377,,200,Yes,10,Tanks Bulk Meter,County Government ,Yes,KPLC,Community,Yes,50 per unit,135,0
+Rongai,Solam B.,-0.19416,35.8939131,1970,104,Yes,5,Tanks Bulk Meter Pump House,Settlers,Yes,KPLC,Community,Yes,2 per 20ltrs,0,250
+Rongai,Salome B 2,-0.1995589,35.890104,2020,230,Yes,12,Fence Tanks Bulk Meter,County Government ,Yes,Solar,Community,Yes,"2 per 20 Ltr, 50 per unit",150,150
+Rongai,Salom A,-0.2028213,35.9115222,2012,231,Yes,8,Tanks Bulk Meter,County Government ,Yes,KPLC,Community,Yes,"2 per 20 Ltr, 50 per unit",100,150
+Rongai,Gecha B,-0.3085338,35.9383616,2020,195,Yes,12,Fence Pump House Tanks Bulk Meter,County Government ,Yes,Solar,Community,No,2 per 20 Ltr,0,400
+Rongai,Ogilgei,-0.2988997,35.9559856,1996,157,Yes,9,Tanks Bulk Meter Pump House,County Government ,Yes,KPLC & Solar,Community,Yes,,460,300
+Rongai,Kerma,-0.3184167,35.9735608,1960,180,Yes,15,Tanks Bulk Meter,Settlers,Yes,KPLC,Community,No,"5 per 20ltrs, 125 per unit",0,350
